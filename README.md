@@ -4,10 +4,15 @@ This project allows you to run parallel tests on iOS and Android devices at the 
 
 In the project 
 Appium 2.4.1 , 
+
 Java JDK 21.0.3 , 
+
 Allure Report 2.17.0 , 
+
 TestNG 7.4.0 ,
+
 Appium Java Client 7.6.0 ,
+
 jUnit 4.11 was used.
 
 It supports parallel testing. 
@@ -15,19 +20,6 @@ It supports parallel testing.
 You can run tests simultaneously on IOS, Android physical and emulator, simulator devices.
 
 ***Getting Started***
-
-This project allows you to run parallel tests on iOS and Android devices at the same time. 
-
-In the project 
-Appium 2.4.1 , 
-Java JDK 21.0.3 , 
-Allure Report 2.17.0 , 
-TestNG 7.4.0 ,
-Appium Java Client 7.6.0 ,
-jUnit 4.11 was used.
-
-It supports parallel testing. 
-You can run tests simultaneously on IOS, Android physical and emulator, simulator devices.
 
 TestNg.xml file contains 5 parameters.
 
@@ -63,6 +55,7 @@ bash ```
 
     }
 ```
+
 <img width="1302" alt="Screenshot 2024-05-18 at 18 45 46" src="https://github.com/hakantektas/appium-parallel-test/assets/72494835/e168ab68-9e0d-4e00-bbc3-70b9afb3250a">
 
 ***Setup and Use***
