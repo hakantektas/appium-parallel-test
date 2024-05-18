@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="10">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test name="AndroidTest 1">
+        <parameter name="deviceName" value="Samsung Galaxy Note8"></parameter>
+        <parameter name="platformVersion" value="9.0"></parameter>
+        <parameter name="udid" value="988d9145524846413130"></parameter>
+        <parameter name="port" value="4723"></parameter>
+        <parameter name="app" value="./appium-parallel-test/app/sample.apk"></parameter>
+        <classes>
+            <class name="com.example.project.ParallelTestAndroid"/>
+        </classes>
+    </test>
+    <test name="iOSTest 1">
+        <parameter name="deviceName" value="iPhone 12"></parameter>
+        <parameter name="platformVersion" value="17.4.1"></parameter>
+        <parameter name="udid" value="00008101-000D29081442001E"></parameter>
+        <parameter name="port" value="4724"></parameter>
+        <parameter name="app" value="./appium-parallel-test/app/sample.ipa"></parameter>
+        <classes>
+            <class name="com.example.project.ParallelTestIOS"/>
+        </classes>
+    </test>
+<!--    <test name="iOSTest Simulator">
+        <parameter name="deviceName" value="iPhone 15 Pro Max"></parameter>
+        <parameter name="platformVersion" value="17.0"></parameter>
+        <parameter name="udid" value="99234447-61CA-42A3-AD1A-87A367228AA7"></parameter>
+        <parameter name="port" value="4725"></parameter>
+        <parameter name="app" value="./appium-parallel-test/app/my.rn.demo.app.ios.sim.zip"></parameter>
+        <classes>
+            <class name="com.example.project.ParallelTestIOSSimulator"/>
+        </classes>
+    </test>
+    <test name="AndroidTest Simulator">
+        <parameter name="deviceName" value="Device1"></parameter>
+        <parameter name="platformVersion" value="13.0"></parameter>
+        <parameter name="udid" value="emulator-5554"></parameter>
+        <parameter name="port" value="4726"></parameter>
+        <parameter name="app" value="./appium-parallel-test/app/sample.apk"></parameter>
+        <classes>
+            <class name="com.example.project.ParallelTestAndroidSimulator"/>
+        </classes>
+    </test>
+    <test name="AndroidTest Performance">
+        <parameter name="deviceName" value="Samsung Galaxy Note8"></parameter>
+        <parameter name="platformVersion" value="9.0"></parameter>
+        <parameter name="udid" value="988d9145524846413130"></parameter>
+        <parameter name="port" value="4727"></parameter>
+        <parameter name="app" value="./appium-parallel-test/app/sample.apk"></parameter>
+        <classes>
+            <class name="com.example.project.AppPerformanceTest"/>
+        </classes>
+    </test>-->
+</suite>
