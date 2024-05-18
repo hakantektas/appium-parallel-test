@@ -76,7 +76,12 @@ appium plugin install device-farm
 
 **device-farm :** With Device-Farm plugin, you can monitor all your devices, view available, busy, offline status and device information.
 
+<img width="1722" alt="Screenshot 2024-05-18 at 18 46 43" src="https://github.com/hakantektas/appium-parallel-test/assets/72494835/0ff93daf-eb29-4bee-b25b-a31c03b546a1">
+
+
 **appium-dashboard :** With Appium Dashboard plugin, you can watch all your test runs live and view their logs.
+
+<img width="1721" alt="Screenshot 2024-05-18 at 18 46 52" src="https://github.com/hakantektas/appium-parallel-test/assets/72494835/bb29cbbb-889d-4229-ad36-35b48b98b1ed">
 
 
 ***Allure Reporting***
