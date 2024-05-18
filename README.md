@@ -39,15 +39,45 @@ app : In the project, separate ipa files for iOS simulator and physical device a
 
 Do not forget to set these 5 Appium capability values and check deviceName, platformVersion, udid , port and app values on your testng.xml file.
 
+Ayrıca Proje de mobil App performance testi için sample test senaryosu da mevcut .
+
+bash ```
+ @Test
+    public void measurePerformanceMetrics() {
+
+
+        // Get supported performance data types
+        List<String> dataTypes = driver.getSupportedPerformanceDataTypes();
+        System.out.println("Supported Performance Data Types: ” + dataTypes);
+        // Get performance data for CPU
+        List<List<Object>> cpuMetrics = driver.getPerformanceData(“app.com.sandjs.bankaccountfakewallet”, “cpuinfo”, 30);
+        System.out.println("CPU Metrics: ” + cpuMetrics);
+
+        // Get performance data for memory
+        List<List<Object>> memoryMetrics = driver.getPerformanceData(“app.com.sandjs.bankaccountfakewallet”, “memoryinfo”, 30);
+        System.out.println("Memory Metrics: ” + memoryMetrics);
+
+        // Get performance data for battery
+        List<List<Object>> batteryMetrics = driver.getPerformanceData(“app.com.sandjs.bankaccountfakewallet”, “batteryinfo”, 30);
+        System.out.println("Battery Metrics: ” + batteryMetrics);
+
+    }
+```
+<img width="1302" alt="Screenshot 2024-05-18 at 18 45 46" src="https://github.com/hakantektas/appium-parallel-test/assets/72494835/e168ab68-9e0d-4e00-bbc3-70b9afb3250a">
+
 ***Setup and Use***
 
 If you want to run tests on how many devices at the same time, you need to give different port numbers and add mandatory information in Testng.xml.
 
 You can use the following commands to start Appium server via terminal.
 appium --port 4723 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
+
 appium --port 4724 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
+
 appium --port 4725 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
+
 appium --port 4726 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
+
 appium --port 4727 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
 ...
 
