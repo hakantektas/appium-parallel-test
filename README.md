@@ -33,7 +33,7 @@ Do not forget to set these 5 Appium capability values and check deviceName, plat
 
 Ayrıca Proje de mobil App performance testi için sample test senaryosu da mevcut .
 
-bash ```
+```
  @Test
     public void measurePerformanceMetrics() {
 
@@ -57,6 +57,7 @@ bash ```
 ```
 
 <img width="1302" alt="Screenshot 2024-05-18 at 18 45 46" src="https://github.com/hakantektas/appium-parallel-test/assets/72494835/e168ab68-9e0d-4e00-bbc3-70b9afb3250a">
+
 
 ***Setup and Use***
 
