@@ -64,6 +64,7 @@ Ayrıca Proje de mobil App performance testi için sample test senaryosu da mevc
 If you want to run tests on how many devices at the same time, you need to give different port numbers and add mandatory information in Testng.xml.
 
 You can use the following commands to start Appium server via terminal.
+```
 appium --port 4723 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
 
 appium --port 4724 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
@@ -73,6 +74,7 @@ appium --port 4725 --use-plugins=device-farm,appium-dashboard --plugin-device-fa
 appium --port 4726 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
 
 appium --port 4727 --use-plugins=device-farm,appium-dashboard --plugin-device-farm-platform=both --log-timestamp --log-level debug
+```
 ...
 
 You can review the documents for Appium installation.
@@ -80,24 +82,25 @@ You can review the documents for Appium installation.
 https://appium.io/docs/en/latest/quickstart/install/
 
 Appium latest version can be installed with the following command via the terminal.
-
+```
 npm install -g appium@next
-
+```
 **Run the following commands to install Appium drivers**
 
+```
 appium driver install uiautomator2
 appium driver install xcuitest
 appium driver install espresso
 appium driver install mac2
-
+```
 **Run the following commands for Appium plugin installations**
-
+```
 appium plugin install images
 appium plugin install execute-driver
 appium plugin install relaxed-caps 
 appium plugin install appium-dashboard
 appium plugin install device-farm
-
+```
 **device-farm :** With Device-Farm plugin, you can monitor all your devices, view available, busy, offline status and device information.
 
 <img width="1722" alt="Screenshot 2024-05-18 at 18 46 43" src="https://github.com/hakantektas/appium-parallel-test/assets/72494835/0ff93daf-eb29-4bee-b25b-a31c03b546a1">
