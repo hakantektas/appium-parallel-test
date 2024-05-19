@@ -23,15 +23,15 @@ You can run tests simultaneously on IOS, Android physical and emulator, simulato
 
 TestNg.xml file contains 5 parameters.
 
-deviceName : Device name 
+**deviceName** : Device name 
 
-platformVersion : Device version
+**platformVersion** : Device version
 
-udid : udid information of the physical or emulator device
+**udid** : udid information of the physical or emulator device
 
-port : If you want to run on how many devices, you must give a port for each one. Appium default port is 4723, in this xml it is given as 4724, 4725 ... by increasing +1 for each device.
+**port** : If you want to run on how many devices, you must give a port for each one. Appium default port is 4723, in this xml it is given as 4724, 4725 ... by increasing +1 for each device.
 
-app : In the project, separate ipa files for iOS simulator and physical device are included as examples. For Android, a single apk file is used.
+**app** : In the project, separate ipa files for iOS simulator and physical device are included as examples. For Android, a single apk file is used.
 
 Do not forget to set these 5 Appium capability values and check deviceName, platformVersion, udid , port and app values on your testng.xml file.
 
