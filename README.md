@@ -94,6 +94,10 @@ To run the testng.xml command through the terminal
 ```
 mvn test -Dsurefire.suiteXmlFiles=/Users/hakantektas/appium-parallel-test/testng.xml
 ```
+Run the test class via Terminal with the Maven command.
+```
+mvn test -DdeviceName=emulator-5554 -DplatformVersion=10.0 -Dapp=./app/sample.apk -Dudid=emulator-5554 -Dport=4723 -Dtest=com.example.project.ParallelTestAndroid
+```
 
 **Run the following commands to install Appium drivers**
 
