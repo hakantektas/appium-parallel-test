@@ -40,13 +40,10 @@ public class ParallelTestIOS {
         caps.setCapability("platformName", "iOS");
         caps.setCapability("udid", udid);
         caps.setCapability("app", app);
-        // caps.setCapability("appPackage", appPackage);
-        // caps.setCapability("appActivity", appActivity);
         caps.setCapability("automationName", "XCUITest");
-        caps.setCapability("noReset", false);
-        caps.setCapability("fullReset", true);
+        caps.setCapability("noReset", true);
+        caps.setCapability("fullReset", false);
         caps.setCapability("useNewWDA",false);
-        // caps.setCapability("browserName","Safari");
         caps.setCapability("newCommandTimeout", "60");
 
         // Appium server URL

@@ -34,8 +34,8 @@ public class ParallelTestAndroidSimulator {
         // caps.setCapability("appPackage", appPackage);
         // caps.setCapability("appActivity", appActivity);
         caps.setCapability("automationName", "UiAutomator2");
-        caps.setCapability("noReset", false);
-        caps.setCapability("fullReset", true);
+        caps.setCapability("noReset", true);
+        caps.setCapability("fullReset", false);
         caps.setCapability("newCommandTimeout", 60);
 
         // Appium server URL

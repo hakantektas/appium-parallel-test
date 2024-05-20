@@ -24,7 +24,7 @@
             <class name="com.example.project.ParallelTestIOS"/>
         </classes>
     </test>
-<!--    <test name="iOSTest Simulator">
+ <test name="iOSTest Simulator">
         <parameter name="deviceName" value="iPhone 15 Pro Max"></parameter>
         <parameter name="platformVersion" value="17.0"></parameter>
         <parameter name="udid" value="99234447-61CA-42A3-AD1A-87A367228AA7"></parameter>
@@ -44,6 +44,7 @@
             <class name="com.example.project.ParallelTestAndroidSimulator"/>
         </classes>
     </test>
+    <!--
     <test name="AndroidTest Performance">
         <parameter name="deviceName" value="Samsung Galaxy Note8"></parameter>
         <parameter name="platformVersion" value="9.0"></parameter>
