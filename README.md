@@ -89,6 +89,12 @@ Appium latest version can be installed with the following command via the termin
 ```
 npm install -g appium@next
 ```
+
+To run the testng.xml command through the terminal 
+```
+mvn test -Dsurefire.suiteXmlFiles=/Users/hakantektas/appium-parallel-test/testng.xml
+```
+
 **Run the following commands to install Appium drivers**
 
 ```
