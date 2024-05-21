@@ -23,16 +23,19 @@ pipeline {
                         // To run Maven on a Windows agent, use
                         // bat "mvn -Dmaven.test.failure.ignore=true clean package"
                     }
-
+                    steps {
+                        script {
+                                allure([
+                                        includeProperties: false,
+                                        jdk: '',
+                                        properties: [],
+                                        reportBuildPolicy: 'ALWAYS',
+                                        results: [[path: 'target/allure-results']]
+                                ])
+                            }
+                        }
                     post {
                         always {
-                            allure([
-                                includeProperties: false,
-                                jdk: '',
-                                properties: [],
-                                reportBuildPolicy: 'ALWAYS',
-                                results:[dir('target/allure-results')]
-                            ])
                             testNG()
                             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './target/surefire-reports/', reportFiles: 'index.html', reportName: 'HTML Report ALL TEST CASE', reportTitles: '', useWrapperFileDirectly: true])
                             mail subject: 'TEST RESULT', body: 'test', bcc: '', cc: '', from: 'hakan.tektas@mobven.com', replyTo: '', to: 'muh.hakantektas@gmail.com'
