@@ -48,9 +48,8 @@ pipeline {
                         }
                     }
                 }
-        }
 
-        stage('test') {
+        stage('Generate Reporter') {
             steps {
                 echo 'second stage added'
                 sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
@@ -58,4 +57,5 @@ pipeline {
                 sh 'mvn io.qameta.allure:allure-maven:serve'
             }
         }
+    }
 }
