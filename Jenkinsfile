@@ -46,17 +46,5 @@ pipeline {
                         }
                     }
                 }
-        stage('Search Test') {
-                    steps {
-                        // Get some code from a GitHub repository
-                        git 'https://github.com/hakantektas/appium-parallel-test.git'
-
-                        // Run Maven on a Unix agent.
-                        sh "mvn test -DdeviceName="emulator-5554" -DplatformVersion="10.0" -Dapp="./app/sample.apk" -Dudid="emulator-5554" -Dport="4723" -Dtest=com.example.project.ParallelTestAndroid"
-
-                        // To run Maven on a Windows agent, use
-                        // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-                    }
-                }
         }
 }
