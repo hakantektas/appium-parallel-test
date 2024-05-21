@@ -38,7 +38,7 @@ public class ParallelTestIOSSimulator {
         caps.setCapability("noReset", true);
         caps.setCapability("fullReset", false);
         caps.setCapability("useNewWDA",false);
-        caps.setCapability("newCommandTimeout", 60);
+        caps.setCapability("newCommandTimeout", "60");
 
         // Appium server URL
         URL url = new URL("http://127.0.0.1:" + port);
