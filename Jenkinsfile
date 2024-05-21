@@ -25,10 +25,7 @@ pipeline {
                     }
 
                     post {
-                        // If Maven was able to run the tests, even if some of the test
-                        // failed, record the test results and archive the jar file.
                         always {
-                            // Allure raporlarını göster
                             allure([
                                 includeProperties: false,
                                 jdk: '',
@@ -54,7 +51,7 @@ pipeline {
                 echo 'second stage added'
                 sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
                 // Allure raporlarını oluşturmak için Allure'ı yükle ve testleri çalıştır
-                sh 'mvn io.qameta.allure:allure-maven:serve'
+                sh 'allure serve'
             }
         }
     }
