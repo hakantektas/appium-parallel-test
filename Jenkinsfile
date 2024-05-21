@@ -24,7 +24,7 @@ pipeline {
                         git 'https://github.com/hakantektas/appium-parallel-test.git'
 
                         // Run Maven on a Unix agent.
-                        sh "https://github.com/hakantektas/appium-parallel-test.git"
+                        sh "mvn test -Dsurefire.suiteXmlFiles=/Users/hakantektas/appium-parallel-test/testng.xml"
 
                         // To run Maven on a Windows agent, use
                         // bat "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -46,7 +46,7 @@ pipeline {
                         }
                     }
                 }
-                stage('Search Test') {
+        stage('Search Test') {
                     steps {
                         // Get some code from a GitHub repository
                         git 'https://github.com/hakantektas/appium-parallel-test.git'
@@ -58,5 +58,5 @@ pipeline {
                         // bat "mvn -Dmaven.test.failure.ignore=true clean package"
                     }
                 }
-    }
+        }
 }
