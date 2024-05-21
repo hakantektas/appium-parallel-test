@@ -42,7 +42,7 @@ pipeline {
                                 jdk: '',
                                 properties: [],
                                 reportBuildPolicy: 'ALWAYS',
-                                results: 'target/allure-results'
+                                results:[dir('target/allure-results')]
                             ])
                             testNG()
                             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: './target/surefire-reports/', reportFiles: 'index.html', reportName: 'HTML Report ALL TEST CASE', reportTitles: '', useWrapperFileDirectly: true])
