@@ -48,8 +48,6 @@ pipeline {
                         }
                     }
                 }
-        }
-
         stage('Generate') {
             steps {
                 echo 'second stage added'
@@ -58,4 +56,6 @@ pipeline {
                 sh 'mvn io.qameta.allure:allure-maven:serve'
             }
         }
+    }
+
 }
