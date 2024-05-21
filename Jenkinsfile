@@ -12,14 +12,6 @@ pipeline {
                 echo 'not using shell in the Jenkinsfile'
             }
         }
-        stage('test') {
-            steps {
-                echo 'second stage added'
-                sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
-                // Allure raporlarını oluşturmak için Allure'ı yükle ve testleri çalıştır
-                sh 'mvn io.qameta.allure:allure-maven:serve'
-            }
-        }
         stage('ALL TEST RUN') {
                     steps {
                         // Get some code from a GitHub repository
@@ -56,5 +48,14 @@ pipeline {
                         }
                     }
                 }
+        }
+
+        stage('test') {
+            steps {
+                echo 'second stage added'
+                sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
+                // Allure raporlarını oluşturmak için Allure'ı yükle ve testleri çalıştır
+                sh 'mvn io.qameta.allure:allure-maven:serve'
+            }
         }
 }
