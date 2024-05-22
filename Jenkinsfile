@@ -10,6 +10,7 @@ pipeline {
                 echo "Hello World"
                 sh 'echo using shell within Jenkinsfile'
                 echo 'not using shell in the Jenkinsfile'
+                echo "Hello World 2"
             }
         }
         stage('ALL TEST RUN') {
